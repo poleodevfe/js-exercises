@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, expectTypeOf, it } from "vitest";
 import wrapping from ".";
 
 describe("wrapping", () => {
@@ -11,5 +11,6 @@ describe("wrapping", () => {
     ];
     const wrapped = wrapping(gifts);
     expect(wrapped).toEqual(expected);
+    expectTypeOf(wrapped).toBeArray();
   });
 });
